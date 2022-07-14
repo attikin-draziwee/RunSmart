@@ -25,12 +25,12 @@ const { SRC_PATH, DIST_PATH, CLEAR_FILES, STYLES } = require('./gulp.config');
 const files = CLEAR_FILES;
 const cssFiles = [...STYLES, `${SRC_PATH}/scss/main.scss`];
 
-gulp.task('cleanAll', () => gulp.src([SRC_PATH, `${SRC_PATH}/scss/layout/font.scss`, `${SRC_PATH}/fonts/converted/`], { read: false })
+gulp.task('cleanAll', () => gulp.src([DIST_PATH, `${SRC_PATH}/scss/layout/font.scss`, `${SRC_PATH}/fonts/converted/`], { read: false })
   .pipe(clean()));
-gulp.task('clean', () => gulp.src([`${DIST_PATH}/**/*`, `${SRC_PATH}/scss/layout/font.scss`], { read: true })
+gulp.task('clean', () => gulp.src([DIST_PATH, `${SRC_PATH}/scss/layout/font.scss`], { read: false })
   .pipe(clean()));
 
-gulp.task('pugToHtml', () => gulp.src(`${SRC_PATH}*.pug`)
+gulp.task('pugToHtml', () => gulp.src(`${SRC_PATH}/*.pug`)
   .pipe(pug({
     pretty: process.env.NODE_ENV == 'dev' ? true : false
   }))
@@ -97,7 +97,7 @@ gulp.task('sass', () => gulp.src(cssFiles)
     one: false
   }))
   .pipe(gulpIf(crossEnv === 'build', gcmq()))
-  .pipe(gulpIf(crossEnv === 'build', cssAutoPrefix({ browsers: ['last 2 versions'], cascade: false })))
+  .pipe(gulpIf(crossEnv === 'build', cssAutoPrefix()))
   .pipe(gulpIf(crossEnv === 'build', cleanCSS()))
   .pipe(gulpIf(crossEnv === 'dev', gulpMaps.write()))
   .pipe(gulp.dest(DIST_PATH))
