@@ -40,7 +40,7 @@ task('pug', () => src(`${SRC}/*.pug`)
   .pipe(dest(DIST))
   .pipe(reload({ stream: true })));
 task('copy:img', () => src(`${SRC}/img/**/*`)
-  .pipe(minImg([minImg.mozjpeg({ quality: 75, progressive: true }), minImg.optipng({ optimizationLevel: 3 }),]))
+  .pipe(minImg([minImg.mozjpeg({ quality: 100, progressive: true }), minImg.optipng({ optimizationLevel: 3 }),]))
   .pipe(webpImg())
   .pipe(dest(`${DIST}/img`))
   .pipe(reload({ stream: true })));

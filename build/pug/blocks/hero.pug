@@ -1,0 +1,23 @@
+section.hero: .container.hero__container
+  include ./header.pug
+  .hero__content
+    h1.hero__heading
+      | Подбор пульсометра
+      span.hero__heading--thin с учётом Вашего уровня подготовки
+    
+    ul.hero__list
+      li.hero__item
+        svg.hero__icon.hero__icon--white: use(xlink:href='./icons/sprite.svg#hero--timer')
+        span.hero__desc Время подбора: 10 минут
+      li.hero__item
+        svg.hero__icon: use(xlink:href='./icons/sprite.svg#hero--cart')
+        span.hero__desc Бесплатная доставка
+      li.hero__item
+        svg.hero__icon: use(xlink:href='./icons/sprite.svg#hero--message')
+        span.hero__desc Ответим на&nbsp;все&nbsp;вопросы
+    
+    .hero-CTA
+      button.CTA.CTA--hero(href="#") Заказать консультацию
+      span.hero-CTA__text
+        |или 
+        a.hero-CTA__link(href="#") ПЕРЕЙТИ В КАТАЛОГ

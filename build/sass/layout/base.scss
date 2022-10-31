@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: white;
+  font-family: Museomoderno, sans-serif;
+  font-size: pxToRem($font-size);
+  @include adaptive($mob) {
+    $font-size: 3.33vmin;
+    font-size: $font-size;
+  }
+  font-weight: normal;
+  line-height: 1.42em;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper {
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Компоненты
+.logo__text, .logo {
+  display: flex;
+  gap: min(2vmin ,20px);
+  &__pic {
+    fill: white;
+    width: pxToRem(45px);
+    height: pxToRem(45px);
+  }
+  &__text {
+    flex-direction: column;
+    font-family: Nunito;
+    gap: 5px;
+  }
+  &__title {
+    font-size: pxToRem(30px);
+    font-weight: 500;
+  }
+  &__subtitle {
+    letter-spacing: pxToRem(-1px);
+  }
+}
+
+.CTA {
+  border: none;
+  color:white;
+  cursor: pointer;
+  width: fit-content;
+  padding: pxToRem(17px) pxToRem(42px);
+  background-color: $accent-red;
+  border-radius: pxToRem(5px);
+  line-height: 100%;
+  font-size: pxToRem(16px);
+  font-weight: 500;
+  text-transform: uppercase;
+  &--header {
+      font-size: pxToRem(12px);
+      padding: pxToRem(10px) pxToRem(20px);
+  }
+  &--hero {
+    margin-bottom: pxToRem(10px);
+  }
+}
+
+.heading {
+  text-align: center;
+  color: #0D0D0D;
+  font-weight: 700;
+  font-size: pxToRem(30px);
+  line-height: pxToRem(30px);
+}
