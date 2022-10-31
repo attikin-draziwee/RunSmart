@@ -1,0 +1,53 @@
+.form {
+  background: url('../img/opportunities.webp') center center/ cover;
+  &__container {
+    min-height: 680px;
+  }
+  &__content {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include adaptive($tablet) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    @include adaptive($tablet) {
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &__heading {
+    margin-bottom: pxToRem(8px);
+  }
+  &__subtitle {
+    font-weight: 500;
+    max-width: 50%;
+    @include adaptive($tablet) {
+      max-width: none;
+    }
+    font-size: pxToRem(20px);
+    line-height: pxToRem(30px);
+    margin-bottom: pxToRem(36px);
+  }
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__input {
+    border-radius: pxToRem(5px);
+    padding: pxToRem(22px);
+    &:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+}

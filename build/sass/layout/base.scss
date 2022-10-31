@@ -37,7 +37,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+input {
+  border: none;
+  outline: none;
+}
 // Компоненты
 .logo__text, .logo {
   display: flex;
@@ -84,8 +87,15 @@ a {
 
 .heading {
   text-align: center;
+  text-transform: uppercase;
   color: #0D0D0D;
   font-weight: 700;
   font-size: pxToRem(30px);
   line-height: pxToRem(30px);
+  &--white {
+    color: white;
+    font-size: pxToRem(36px);
+    line-height: pxToRem(54px);
+    text-align: inherit;
+  }
 }

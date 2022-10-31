@@ -2,7 +2,7 @@
   color: white;
   background: url('../img/hero.webp') center center/ cover no-repeat;
   &__container {
-    height: pxToRem(650px);
+    height: 650px;
     display: flex;
     flex-direction: column;
   }

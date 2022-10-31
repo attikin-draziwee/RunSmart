@@ -1,0 +1,9 @@
+section.form: .container.form__container: .form__content
+  .form__title
+    h2.heading.heading--white.form__heading Получите бесплатную консультацию по&nbsp;подбору пульсометра
+    p.form__subtitle Просто заполните форму заявки и&nbsp;мы&nbsp;перезвоним вам&nbsp;в&nbsp;течении 10 минут
+  form(action='#' method='POST').form__inputs
+    input.form__input(placeholder='Ваше имя' type='text' name='name' required)
+    input.form__input(placeholder='Ваш телефон' type='tel' pattern='([0-9]+{10})' name='phone' required)
+    input.form__input(placeholder='Ваш E-mail' type='email' name='mail' required)
+    input(type='submit' value='Заказать консультацию').CTA.form__CTA
