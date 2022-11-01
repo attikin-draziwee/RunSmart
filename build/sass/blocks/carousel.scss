@@ -1,0 +1,54 @@
+.carousel {
+  &__container {
+    padding-block: pxToRem(81px);
+    max-width: pxToRem(750px);
+  }
+  &__list {
+    position: relative;
+  }
+  &__arrow {
+    position: absolute !important;
+    top:50% !important;
+    fill: transparent;
+    stroke: $accent-red;
+    stroke-width: 50;
+    width: pxToRem(31px);
+    height: pxToRem(50px);
+    &--left {
+      left: -70px;
+    }
+    &--right {
+      transform: scale(-1,-1);
+      right: -70px;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+  &__dot {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-top: pxToRem(30px);
+    & li > button {
+      position: relative;
+      background: transparent;
+      border: none;
+    }
+    & li > button::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: '';
+      width: pxToRem(30px);
+      height: pxToRem(30px);
+      background-color: grey;
+      border-radius: 100%;
+    }
+    & li[class='slick-active'] > button::after {
+      background-color: $accent-red;
+    }
+  }
+}

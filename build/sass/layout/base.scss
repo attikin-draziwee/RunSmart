@@ -16,7 +16,9 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.hidden {
+  display: none;
+}
 .container {
   max-width: 950px;
   width: 100%;
