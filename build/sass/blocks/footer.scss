@@ -1,0 +1,48 @@
+.footer {
+  &__container {
+    max-height: pxToRem(630px);
+    height: 100%;
+    position: relative;
+  }
+  &__content {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: pxToRem(460px);
+    height: pxToRem(270px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: $accent-red;
+  }
+  &__address, &__number {
+    font-weight: 500;
+    font-size: pxToRem(20px);
+  }
+  &__number {
+    font-weight: 700;
+  }
+}
+.social {
+  &__list {
+    gap: pxToRem(27px);
+  }
+  &__link {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: pxToRem(52px);
+    height: pxToRem(52px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    width: 60%;
+    height: 60%;
+    // padding: 10% 20%;
+    fill: white;
+  }
+}
