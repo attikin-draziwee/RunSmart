@@ -1,0 +1,57 @@
+.review {
+  &__container {
+  }
+  &__heading {
+    margin-bottom: pxToRem(60px);
+  }
+}
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: min(7vmin, pxToRem(60px));
+
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: min(7vmin, pxToRem(60px));
+  color: #0D0D0D;
+  @include adaptive($mob) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-inline: pxToRem(20px);
+  }
+  &__photo {}
+  &__img {
+    width: min(30vmin,169px);
+  }
+  &__info {}
+  &__name {
+    font-weight: 700;
+    font-size: pxToRem(18px);
+    line-height: 100%;
+  }
+  &__marathons {
+    font-weight: 500;
+    font-size: pxToRem(14px);
+    line-height: pxToRem(22px);
+    color: #646464;
+    margin-bottom: pxToRem(10px);
+  }
+  &__review {
+    & p {
+      font-weight: 300;
+      font-size: pxToRem(16px);
+      line-height: pxToRem(24px);
+      &::after {
+        content: '';
+        display: block;
+        height: pxToRem(16px);
+      }
+    }
+  }
+}
