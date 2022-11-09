@@ -1,0 +1,62 @@
+section.catalog: .container.catalog__container 
+  h2.heading Каталог пульсометров
+  ul.catalog__tabs
+    li.catalog__tab(data-list='1').catalog__tab--active: span.catalog__tab-text Для фитнеса
+    li.catalog__tab(data-list='2'): span.catalog__tab-text Для бега
+    li.catalog__tab(data-list='3'): span.catalog__tab-text Для триатлона
+  ul.catalog__lists
+    li.catalog__list.catalog__list--active(data-list='1')
+      ul.catalog__products
+        each val in [1,2,3,4,5,6]
+          li.catalog__item 
+            .catalog__front
+              img.catalog__img(src="./img/product.webp" alt="Пульсометр Polar FT1")
+              h3.catalog__title Пульсометр Polar FT1
+              p.catalog__desc
+                | Для первых шагов в тренировках, основанных на сердечном ритме
+              a.catalog__more.next-prev(href="") Подробнее
+            .catalog__back.dn
+              ul.more__list
+                li.more__item: span.more__item-text
+                  | Вы услышите звуковое оповещение о&nbsp;нужном пульсе во&nbsp;время тренировки;
+                li.more__item: span.more__item-text
+                  | Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+                li.more__item: span.more__item-text
+                  | Также Вы&nbsp;увидите информацию о&nbsp;расходе калорий за&nbsp;тренировку;
+                li.more__item: span.more__item-text
+                  | Вы сможете посмотреть данные по&nbsp;10&nbsp;тренировкам.
+              a.catalog__info.next-prev(href="") Назад
+            .catalog__buy
+              .catalog__buy-content
+                .price
+                  .price__old 4 750 руб.
+                  .price__new 4 500 руб.
+                a.CTA.catalog__buy-CTA(href="#") Купить
+    li.catalog__list(data-list='2')
+      ul.catalog__products
+        each val in [1,2,3]
+          li.catalog__item 
+            .catalog__front
+              img.catalog__img(src="./img/product.webp" alt="Пульсометр Polar FT4")
+              h3.catalog__title Пульсометр Polar FT4
+              p.catalog__desc
+                | Для первых шагов в тренировках, основанных на сердечном ритме
+              a.catalog__more.next-prev(href="") Подробнее
+            .catalog__back.dn
+              ul.more__list
+                li.more__item: span.more__item-text
+                  | Вы услышите звуковое оповещение о&nbsp;нужном пульсе во&nbsp;время тренировки;
+                li.more__item: span.more__item-text
+                  | Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+                li.more__item: span.more__item-text
+                  | Также Вы&nbsp;увидите информацию о&nbsp;расходе калорий за&nbsp;тренировку;
+                li.more__item: span.more__item-text
+                  | Вы сможете посмотреть данные по&nbsp;10&nbsp;тренировкам.
+              a.catalog__info.next-prev(href="") Назад
+            .catalog__buy
+              .catalog__buy-content
+                .price
+                  .price__old 4 750 руб.
+                  .price__new 4 500 руб.
+                a.CTA.catalog__buy-CTA(href="#") Купить
+    li.catalog__list(data-list='3')
